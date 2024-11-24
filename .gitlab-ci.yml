@@ -1,0 +1,31 @@
+image: "archlinux:latest"
+
+before_script:
+  - pacman --noconfirm -Syu make gcc bash git sudo fakeroot findutils
+  - printf '%s\n%s\n' "#include <stdio.h>" "$(cat /usr/include/readline/rltypedefs.h)" > /usr/include/readline/rltypedefs.h
+
+Arch Linux Build:
+  script:
+  - make clean
+  - make DEBUG=1
+
+Makepkg:
+  script:
+  - useradd builder
+  - sudo -u builder git clone https://aur.archlinux.org/rshell-git.git
+  - cd rshell-git
+  - sudo -u builder makepkg
+
+image: "fedora:latest"
+before_script:
+  - dnf in make gcc bash git findutils -y
+
+Fedora Build:
+  script:
+  - make clean
+  - make DEBUG=1
+
+RPM:
+  script:
+  - spectool -g -R rshell.spec
+  - rpmbuild -ba rshell.spec

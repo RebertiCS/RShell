@@ -1,0 +1,14 @@
+* RShell
+This shell aims to be minimal as possible.
+
+** Install
+*** General approuch
+#+BEGIN_SRC sh
+make
+make install
+#+END_SRC
+*** Arch Linux
+Avalable on AUR.
+#+BEGIN_SRC sh
+make pkg
+#+END_SRC

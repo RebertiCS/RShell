@@ -1,0 +1,13 @@
+{
+    "editor.fontFamily": "'Hack', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.tabSize": 8,
+    "editor.insertSpaces": false,
+    "editor.wordWrap": "on",
+    "editor.dragAndDrop": false,
+    "editor.folding": false,
+    "editor.foldingHighlight": false,
+    "editor.highlightActiveIndentGuide": false,
+    "vim.enableNeovim": true,
+    "editor.lineNumbers": "relative",
+    "zenMode.hideLineNumbers": false
+}
