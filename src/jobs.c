@@ -16,6 +16,8 @@ void signal_handler(int status)
 {
 	switch (status) {
 	case SIGINT:
+		if (job_rn == 0)
+			break;
 		kill(job_rn, SIGCONT);
 		kill(job_rn, SIGINT);
 		break;
