@@ -53,7 +53,7 @@ char *shell_prompt(void)
 				char *pwd = getenv("PWD");
 
 				if (pwd[7] == home[7] && pwd[8] == home[8])
-					sprintf(prompt_ptr, "~/%s",
+					sprintf(prompt_ptr, "~%s",
 						pwd + strlen(home));
 				else
 					sprintf(prompt_ptr, "%s", pwd);

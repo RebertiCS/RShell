@@ -6,8 +6,8 @@
     "editor.dragAndDrop": false,
     "editor.folding": false,
     "editor.foldingHighlight": false,
-    "editor.highlightActiveIndentGuide": false,
     "vim.enableNeovim": true,
     "editor.lineNumbers": "relative",
-    "zenMode.hideLineNumbers": false
+    "zenMode.hideLineNumbers": false,
+    "editor.guides.highlightActiveIndentation": false
 }

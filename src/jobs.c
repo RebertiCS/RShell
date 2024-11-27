@@ -51,7 +51,7 @@ int job_fg(shell_node_t *shell)
 				break;
 			}
 		}
-	} else {
+	} else if (job_list != NULL) {
 		job_name = job_list->name;
 		job_pid = job_list->pid;
 	}
