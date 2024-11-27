@@ -19,8 +19,8 @@ struct {
 	char *str;
 	int (*func)(shell_node_t *);
 } shell_shell[] = {
-	{ "q", shell_quit }, { "cd", shell_cd }, { "bg", job_bg },
-	{ "fg", job_fg },    { NULL, NULL },
+	{ "q", shell_quit }, { "exit", shell_quit }, { "cd", shell_cd },
+	{ "bg", job_bg },    { "fg", job_fg },	     { NULL, NULL },
 };
 
 char shell_hist[256];
